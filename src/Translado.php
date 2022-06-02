@@ -97,7 +97,7 @@ class Translado
         $result = curl_exec($ch);
         curl_close($ch);
 
-        $data = (array) json_decode($result);
+        $data = json_decode($result, true);
         if ($data === false || ($data['error'] ?? null)) {
             $this->access_token = null;
             $this->refresh_token = null;
@@ -226,7 +226,7 @@ class Translado
             return false;
         }
 
-        return $this->commitProductRequest($product->getConnectionId(), $product->getChangeId());
+        return $this->commitProductRequest($product->getChangeId());
     }
 
     /**
