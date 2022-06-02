@@ -7,12 +7,12 @@
     }
 
     $translado = new \Expando\TransladoPackage\Translado();
-    $translado->setToken($_SESSION['translator_token'] ?? null);
+    $translado->setToken($_SESSION['translado_token'] ?? null);
     $translado->setUrl($_SESSION['client_data']['translado_url']);
     if ($translado->isTokenExpired()) {
         $translado->refreshToken($_SESSION['client_data']['client_id'], $_SESSION['client_data']['client_secret']);
         if ($translado->isLogged()) {
-            $_SESSION['translator_token'] = $translado->getToken();
+            $_SESSION['translado_token'] = $translado->getToken();
         }
     }
 ?>

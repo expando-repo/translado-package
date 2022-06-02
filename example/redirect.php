@@ -27,7 +27,7 @@ if (($_POST['send'] ?? null) || ($_GET['code'] ?? null)) {
     if ($token !== null)
     {
         // save to session for example
-        $_SESSION['translator_token'] = $token;
+        $_SESSION['translado_token'] = $token;
         header('Location: index.php');
     }
 }
