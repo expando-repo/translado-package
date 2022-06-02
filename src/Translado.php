@@ -84,9 +84,14 @@ class Translado
             'scope' => '',
         ];
 
+        $headers = [
+            'Content-Type:application/translado-v1.0; charset=utf-8',
+        ];
+
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $this->url . '/oauth/token');
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_HEADER, $headers);
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
         $result = curl_exec($ch);
@@ -264,7 +269,7 @@ class Translado
     public function sendToTranslado(string $action, $method, array $body = []): array
     {
         $headers = array(
-            'Content-Type' => 'application/json',
+            'Content-Type:application/translado-v1.0; charset=utf-8',
             'Accept: application/json',
             'Authorization: Bearer ' . $this->access_token,
         );
