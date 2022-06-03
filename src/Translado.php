@@ -85,7 +85,7 @@ class Translado
         ];
 
         $headers = [
-            'Content-Type:application/translado-v1.0; charset=utf-8',
+            //'Content-Type:application/translado-v1.0; charset=utf-8',
         ];
 
         $ch = curl_init();
@@ -211,7 +211,7 @@ class Translado
             throw new TransladoException('Translado is not logged');
         }
 
-        $data = $this->sendToTranslado('/product/' . $connectionId . '/' . $productId . '/', 'GET');
+        $data = $this->sendToTranslado('/products/' . $connectionId . '/' . $productId . '/', 'GET');
         return new Product\GetResponse($data);
     }
 
@@ -269,8 +269,8 @@ class Translado
     public function sendToTranslado(string $action, $method, array $body = []): array
     {
         $headers = array(
-            'Content-Type:application/translado-v1.0; charset=utf-8',
-            'Accept: application/json',
+            //'Content-Type:application/translado-v1.0; charset=utf-8',
+            //'Accept: application/vnd.api+json',
             'Authorization: Bearer ' . $this->access_token,
         );
 
