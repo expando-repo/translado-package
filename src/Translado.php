@@ -85,7 +85,7 @@ class Translado
         ];
 
         $headers = [
-            //'Content-Type:application/translado-v1.0; charset=utf-8',
+            'Accepts-version: 1.0',
         ];
 
         $ch = curl_init();
@@ -269,8 +269,7 @@ class Translado
     public function sendToTranslado(string $action, $method, array $body = []): array
     {
         $headers = array(
-            //'Content-Type:application/translado-v1.0; charset=utf-8',
-            //'Accept: application/vnd.api+json',
+            'Accepts-version: 1.0',
             'Authorization: Bearer ' . $this->access_token,
         );
 
