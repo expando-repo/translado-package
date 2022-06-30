@@ -16,7 +16,7 @@ class Login
     private array $scopes = [];
     private string $transladoUrl;
 
-    public function __construct(int $clientId, string $clientSecret, string $redirectUrl, string $transladoUrl = 'https://connector.expan.do')
+    public function __construct(int $clientId, string $clientSecret, string $redirectUrl, string $transladoUrl = 'https://app.transla.do')
     {
         $this->clientId = $clientId;
         $this->clientSecret = $clientSecret;

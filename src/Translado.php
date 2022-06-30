@@ -17,7 +17,7 @@ class Translado
     private ?string $access_token = null;
     private ?string $refresh_token = null;
     private ?int $expires = null;
-    private string $url = 'https://connector.expan.do';
+    private string $url = 'https://app.transla.do';
 
     /**
      * @return bool
