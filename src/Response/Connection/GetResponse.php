@@ -31,33 +31,33 @@ class GetResponse implements IResponse
     }
 
     /**
-     * @return int|mixed
+     * @return int
      */
-    public function getConnectionId(): mixed
+    public function getConnectionId(): int
     {
         return $this->connection_id;
     }
 
     /**
-     * @return mixed|string
+     * @return string
      */
-    public function getTitle(): mixed
+    public function getTitle(): string
     {
         return $this->title;
     }
 
     /**
-     * @return mixed|string
+     * @return string
      */
-    public function getLanguage(): mixed
+    public function getLanguage(): string
     {
         return $this->language;
     }
 
     /**
-     * @return mixed|string
+     * @return string
      */
-    public function getType(): mixed
+    public function getType(): string
     {
         return $this->type;
     }

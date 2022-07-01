@@ -41,49 +41,49 @@ class GetResponse implements IResponse
     }
 
     /**
-     * @return int|mixed
+     * @return int
      */
-    public function getProductId(): mixed
+    public function getProductId(): int
     {
         return $this->product_id;
     }
 
     /**
-     * @return int|mixed
+     * @return int
      */
-    public function getConnectionId(): mixed
+    public function getConnectionId(): int
     {
         return $this->connection_id;
     }
 
     /**
-     * @return mixed|string
+     * @return string
      */
-    public function getStatus(): mixed
+    public function getStatus(): string
     {
         return $this->status;
     }
 
     /**
-     * @return mixed|string|null
+     * @return string|null
      */
-    public function getMessage(): mixed
+    public function getMessage(): ?string
     {
         return $this->message;
     }
 
     /**
-     * @return array|mixed
+     * @return array
      */
-    public function getData(): mixed
+    public function getData(): array
     {
         return $this->data;
     }
 
     /**
-     * @return int|mixed|null
+     * @return int|null
      */
-    public function getChangeId(): mixed
+    public function getChangeId(): ?int
     {
         return $this->change_id;
     }

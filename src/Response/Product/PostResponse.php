@@ -25,9 +25,9 @@ class PostResponse implements IResponse
     }
 
     /**
-     * @return int|mixed
+     * @return int
      */
-    public function getProductId(): mixed
+    public function getProductId(): int
     {
         return $this->product_id;
     }

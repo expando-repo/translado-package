@@ -42,7 +42,7 @@ class ListResponse implements IResponse
     }
 
     /**
-     * @return mixed|string
+     * @return string
      */
     public function getStatus(): string
     {

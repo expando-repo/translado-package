@@ -50,41 +50,41 @@ class Variant
     }
 
     /**
-     * @return mixed|string|null
+     * @return string|null
      */
-    public function getIdentifier(): mixed
+    public function getIdentifier(): ?string
     {
         return $this->identifier;
     }
 
     /**
-     * @return mixed|string|null
+     * @return string|null
      */
-    public function getTitle(): mixed
+    public function getTitle(): ?string
     {
         return $this->title;
     }
 
     /**
-     * @return mixed|string|null
+     * @return string|null
      */
-    public function getDescription(): mixed
+    public function getDescription(): ?string
     {
         return $this->description;
     }
 
     /**
-     * @return mixed|string|null
+     * @return string|null
      */
-    public function getDescription2(): mixed
+    public function getDescription2(): ?string
     {
         return $this->description2;
     }
 
     /**
-     * @return mixed|string|null
+     * @return string|null
      */
-    public function getDescriptionShort(): mixed
+    public function getDescriptionShort(): ?string
     {
         return $this->description_short;
     }
@@ -106,17 +106,17 @@ class Variant
     }
 
     /**
-     * @return mixed|string|null
+     * @return string|null
      */
-    public function getEan(): mixed
+    public function getEan(): ?string
     {
         return $this->ean;
     }
 
     /**
-     * @return mixed|string|null
+     * @return string|null
      */
-    public function getSku(): mixed
+    public function getSku(): ?string
     {
         return $this->sku;
     }
@@ -130,9 +130,9 @@ class Variant
     }
 
     /**
-     * @return mixed|string|null
+     * @return string|null
      */
-    public function getImageUrl(): mixed
+    public function getImageUrl(): ?string
     {
         return $this->image_url;
     }

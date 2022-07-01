@@ -24,9 +24,9 @@ class Tag
     }
 
     /**
-     * @return mixed|string
+     * @return string
      */
-    public function getTitle(): mixed
+    public function getTitle(): string
     {
         return $this->title;
     }

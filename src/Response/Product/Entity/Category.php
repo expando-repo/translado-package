@@ -26,17 +26,17 @@ class Category
     }
 
     /**
-     * @return mixed|string
+     * @return string
      */
-    public function getTitle(): mixed
+    public function getTitle(): string
     {
         return $this->title;
     }
 
     /**
-     * @return mixed|string|null
+     * @return string|null
      */
-    public function getDescription(): mixed
+    public function getDescription(): ?string
     {
         return $this->description;
     }

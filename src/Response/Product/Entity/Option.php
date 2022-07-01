@@ -38,17 +38,17 @@ class Option
     }
 
     /**
-     * @return mixed|string
+     * @return string
      */
-    public function getName(): mixed
+    public function getName(): string
     {
         return $this->name;
     }
 
     /**
-     * @return mixed|string
+     * @return string
      */
-    public function getValue(): mixed
+    public function getValue(): string
     {
         return $this->value;
     }
