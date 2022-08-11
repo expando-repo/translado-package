@@ -17,9 +17,17 @@
 
     try {
         $response = $translado->listConnections();
+
+        echo 'Connections count: ' . count($response->getConnections()) . '<br />';
+        echo 'Status: ' . $response->getStatus() . '<br />';
+        echo '-----------------------------<br />';
+
+        echo '<ul>';
+        foreach ($response->getConnections() as $connection) {
+            echo '<li><strong>Connection ID:</strong> ' . $connection->getConnectionId() . ', <strong>Title:</strong> ' . $connection->getTitle() . ', <strong>Language:</strong> ' . $connection->getLanguage() . ', <strong>Type:</strong> ' . ($connection->getType() ?: '--') . '</li>';
+        }
+        echo '</ul>';
     }
     catch (\Expando\TransladoPackage\Exceptions\TransladoException $e) {
         die($e->getMessage());
     }
-
-    echo 'Status: ' . $response->getStatus() . '<br />';
