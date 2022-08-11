@@ -24,7 +24,7 @@
 
         echo '<ul>';
         foreach ($response->getConnections() as $connection) {
-            echo '<li><strong>Connection ID:</strong> ' . $connection->getConnectionId() . ', <strong>Title:</strong> ' . $connection->getTitle() . ', <strong>Icu:</strong> ' . $connection->getIcu() . ', <strong>Type:</strong> ' . ($connection->getType() ?: '--') . '</li>';
+            echo '<li><strong>Connection ID:</strong> ' . $connection->getConnectionId() . ', <strong>Title:</strong> ' . $connection->getTitle() . ', <strong>Language:</strong> ' . $connection->getLanguage() . ', <strong>Type:</strong> ' . ($connection->getType() ?: '--') . '</li>';
         }
         echo '</ul>';
     }

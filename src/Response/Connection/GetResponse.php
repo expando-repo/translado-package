@@ -11,7 +11,7 @@ class GetResponse implements IResponse
 {
     protected int $connection_id;
     protected string $title;
-    protected string $icu;
+    protected string $language;
     protected string $type;
 
     /**
@@ -26,7 +26,7 @@ class GetResponse implements IResponse
         }
         $this->connection_id = $data['connection_id'];
         $this->title = $data['title'];
-        $this->icu = $data['icu'];
+        $this->language = $data['language'];
         $this->type = $data['type'];
     }
 
@@ -49,9 +49,9 @@ class GetResponse implements IResponse
     /**
      * @return string
      */
-    public function getIcu(): string
+    public function getLanguage(): string
     {
-        return $this->icu;
+        return $this->language;
     }
 
     /**

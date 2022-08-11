@@ -18,7 +18,7 @@ if (($_POST['send'] ?? null) || ($_GET['code'] ?? null)) {
             $_SESSION['client_data']['translado_url']
         );
         $login->addScope('products');
-        //$login->addScope('connections');
+        $login->addScope('connections');
         $token = $login->getToken();
     } catch (LoginException $e) {
         die($e->getMessage());
