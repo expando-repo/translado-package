@@ -91,7 +91,7 @@ class Translado
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $this->url . '/oauth/token');
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_HEADER, $headers);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
         $result = curl_exec($ch);
