@@ -124,7 +124,7 @@ class ProductRequest extends Base implements IRequest
      */
     public function inactive(): void
     {
-        $this->status = 'in-active';
+        $this->status = 'inactive';
     }
 
     /**
