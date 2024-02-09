@@ -20,6 +20,7 @@ class Translado
     private string $url = 'https://app.transla.do';
 
     /**
+     * @deprecated
      * @return bool
      */
     public function isLogged(): bool
@@ -32,6 +33,7 @@ class Translado
 
 
     /**
+     * @deprecated
      * @param ?array $token
      */
     public function setToken(?array $token): void
@@ -45,6 +47,7 @@ class Translado
     }
 
     /**
+     * @deprecated
      * @return string[]
      */
     #[ArrayShape(['access_token' => "null|string", 'refresh_token' => "null|string", 'expires' => "int|null", 'token' => "array"])]
@@ -59,6 +62,7 @@ class Translado
     }
 
     /**
+     * @deprecated
      * @return bool
      */
     public function isTokenExpired(): bool
@@ -70,6 +74,7 @@ class Translado
     }
 
     /**
+     * @deprecated
      * @param int $clientId
      * @param string $clientSecret
      * @return array|null
@@ -114,6 +119,7 @@ class Translado
     }
 
     /**
+     * @deprecated
      * @param string $url
      */
     public function setUrl(string $url): void
@@ -122,6 +128,7 @@ class Translado
     }
 
     /**
+     * @deprecated
      * @param IRequest $request
      * @return IResponse
      * @throws TransladoException
@@ -151,6 +158,7 @@ class Translado
 
 
     /**
+     * @deprecated
      * @return Connection\ListResponse
      * @throws TransladoException
      */
@@ -165,6 +173,7 @@ class Translado
     }
 
     /**
+     * @deprecated
      * @param int $connectionId
      * @param int $page
      * @param int $onPage
@@ -185,6 +194,7 @@ class Translado
     }
 
     /**
+     * @deprecated
      * @param int $connectionId
      * @return Product\ListResponse
      * @throws TransladoException
@@ -200,6 +210,7 @@ class Translado
     }
 
     /**
+     * @deprecated
      * @param int $connectionId
      * @param int $productId
      * @return Product\GetResponse
@@ -216,6 +227,7 @@ class Translado
     }
 
     /**
+     * @deprecated
      * @param Product\GetResponse $product
      * @return bool
      * @throws TransladoException
@@ -230,6 +242,7 @@ class Translado
     }
 
     /**
+     * @deprecated
      * @param int $changeId
      * @return bool
      * @throws TransladoException
@@ -245,6 +258,7 @@ class Translado
     }
 
     /**
+     * @deprecated
      * @param int $productId
      * @return bool
      * @throws TransladoException
@@ -260,6 +274,7 @@ class Translado
     }
 
     /**
+     * @deprecated
      * @param string $action
      * @param $method
      * @param array $body
